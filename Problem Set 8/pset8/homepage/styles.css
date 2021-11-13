@@ -1,0 +1,23 @@
+#name {
+    font-family: monspace;
+    font-size: 60px;
+    text-emphasis: underline;
+    color: MediumSeaGreen;
+    opacity: 0.6;
+}
+
+.list {
+    font-family: verdana;
+}
+
+h3 {
+    color: DodgerBlue;
+}
+
+li:hover {
+    color: green;
+}
+
+h4.list {
+    color: SlateBlue;
+}

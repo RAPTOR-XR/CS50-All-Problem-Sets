@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">Was In Account</td>
+                <td>{{ gttl }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            {% for stand in stands %}
+            <tr>
+                <td>{{stand["symbol"]}}</td>
+                <td>{{stand["name"]}}</td>
+                <td>{{stand["shares"]}}</td>
+                <td>{{stand["price"]}}</td>
+                <td>{{stand["ttl"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tr>
+            <td colspan="4">Remaining Cash</td>
+            <td>{{cash}}</td>
+        </tr>
+    </table>
+
+{% endblock %}
